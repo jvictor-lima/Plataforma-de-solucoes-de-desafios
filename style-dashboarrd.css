@@ -12,33 +12,90 @@ body {
     color: #FFFFFF;
 }
  
-.navbar {
+/* Estilização do cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e4e80;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.icon{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #205295;
+    margin: 0px 0.5rem 0px 0px;
 }
- 
-.navbar h1 {
-    font-size: 1.5rem;
+
+.icon img {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px;
 }
- 
-.navbar input {
-    padding: 5px;
-    border-radius: 15px;
+
+.icon:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    margin: 0 10rem
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 40px 8px 10px;
+    border-radius: 20px;
     border: none;
+    outline: none;
 }
- 
-.nav-icons span {
-    margin: 0 5px;
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    color: #888;
+}
+
+/* Ícones à direita */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 1.5rem;
     cursor: pointer;
+    transition: color 0.3s;
 }
+
+.icon:hover {
+    color: #4c8fc1;
+}
+
+/*Fim de cabeçalho*/
  
 main {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10rem;
     background: linear-gradient(90deg, rgba(10,38,71,1) 0%, rgba(20,66,114,1) 100%);
 }
  
@@ -55,20 +112,30 @@ main {
 }
  
 .create-challenge {
-    display: block;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 180px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 30px 0;
     background-color: #205295;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
+.challenges-container-introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
  
 .divider {
     border: 0;
-    height: 0.8px;
+    height: 1px;
     background-color: #fdfdfd;
     margin: 30px 0;
 }
